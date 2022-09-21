@@ -56,14 +56,19 @@ vim.api.nvim_set_keymap("i", "<A-\\>", 'copilot#Accept("<CR>")', { silent = true
 --   },
 -- }
 
+-- Telescope
 lvim.builtin.telescope.defaults.file_ignore_patterns = {
   "node_modules",
+  "bower_components",
+  "chrome_devtools",
   ".vercel",
   "build",
   "dist",
   ".git",
-  ".svelte-kit"
+  ".svelte-kit",
 }
+
+
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
@@ -115,6 +120,7 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
+
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 -- lvim.lsp.installer.setup.ensure_installed = {
@@ -204,8 +210,8 @@ lvim.plugins = {
     "rmagatti/auto-session",
     auto_restore_enabled = false
   },
-  { "rmagatti/session-lens" }
-
+  { "rmagatti/session-lens" },
+  { "tpope/vim-sleuth" }
 }
 
 -- Autosession
