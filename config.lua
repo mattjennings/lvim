@@ -12,8 +12,12 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
+
+vim.o.timeoutlen = 500
+vim.cmd("set relativenumber")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
