@@ -80,6 +80,12 @@ lvim.builtin.which_key.mappings["T"] = {
   name = "+Terminal",
   d = { "<cmd>TermExec cmd=\"npm run dev\"<cr>", "npm run dev" },
 }
+
+lvim.builtin.which_key.mappings["S"] = {
+  name = "+Sessions",
+  s = { "<cmd>:Telescope session-lens search_session<cr>", "Search" },
+}
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
@@ -190,9 +196,20 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
-  }
+  },
+  {
+    "Theprimeagen/vim-be-good",
+  },
+  {
+    "rmagatti/auto-session",
+    auto_restore_enabled = false
+  },
+  { "rmagatti/session-lens" }
+
 }
 
+-- Autosession
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 -- Copilot
 vim.g.copilot_no_tab_map = true
