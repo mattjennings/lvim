@@ -18,7 +18,10 @@ lvim.colorscheme = "onedarker"
 
 vim.o.timeoutlen = 500
 vim.cmd("set relativenumber")
-
+vim.cmd("set foldmethod=indent   ")
+vim.cmd("set foldnestmax=10")
+vim.cmd("set nofoldenable")
+vim.cmd("set foldlevel=2")
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
